@@ -29,7 +29,7 @@ export const projects: Record<string, ProjectsProps> = {
         name: 'Ts-Table',
         description: 'Este é meu principal projeto até o momento, o mesmo foi desenvolvido para o meu TCC do curso técnico. Consiste em um e-commerce voltado para pessoas quem gostam de leitura, ele traz tambem um ambiente de rede-social, podendo ser feito postagens, comentarios, realizar bate-papo com outros usuários e etc.',
         image: '../assets/projects/ts-table.jpg',
-        stack: ['TypeScript', 'React', 'Shadcn-ui'],
+        stack: ['TypeScript', 'React', 'Tailwind', 'Shadcn-ui'],
         codeUrl: 'https://github.com/pablonovaes/ts-table',
         deploy: 'https://tstable.vercel.app/app',
 
@@ -38,7 +38,7 @@ export const projects: Record<string, ProjectsProps> = {
         name: 'Ts-Form',
         description: 'Este é meu principal projeto até o momento, o mesmo foi desenvolvido para o meu TCC do curso técnico. Consiste em um e-commerce voltado para pessoas quem gostam de leitura, ele traz tambem um ambiente de rede-social, podendo ser feito postagens, comentarios, realizar bate-papo com outros usuários e etc.',
         image: '../assets/projects/ts-form.jpg',
-        stack: ['TypeScript', 'React', 'Shadcn-ui', 'Zod'],
+        stack: ['TypeScript', 'React', 'Tailwind', 'Shadcn-ui', 'Zod'],
         codeUrl: 'https://github.com/pablonovaes/ts-form',
         deploy: 'https://ts-form.vercel.app',
 
