@@ -4,6 +4,7 @@ import express from "@/assets/techs/express.svg"
 import figma from "@/assets/techs/figma.svg"
 import firebase from "@/assets/techs/firebase.svg"
 import git from "@/assets/techs/git.svg"
+import githubLight from "@/assets/techs/github.light.svg"
 import github from "@/assets/techs/github.svg"
 import html5 from "@/assets/techs/html5.svg"
 import JavaScript from "@/assets/techs/javascript.svg"
@@ -17,20 +18,20 @@ import typescript from "@/assets/techs/typescript.svg"
 import zod from "@/assets/techs/zod.svg"
 
 export const stackImages = [
-    { name: 'HTML5', src: html5 },
-    { name: 'CSS', src: css },
-    { name: 'JavaScript', src: JavaScript },
-    { name: 'TypeScript', src: typescript },
-    { name: 'Tailwind', src: tailwind },
-    { name: 'Styled Components', src: styledComponents },
-    { name: 'React', src: react },
-    { name: 'Zod', src: zod },
-    { name: 'Node', src: node },
-    { name: 'Mysql', src: mysql },
-    { name: 'Prisma', src: prisma },
-    { name: 'Express', src: express },
-    { name: 'Firebase', src: firebase },
-    { name: 'Git', src: git },
-    { name: 'Github', src: github },
-    { name: 'Figma', src: figma },
+    { name: 'HTML5', type: "Front-End", src: html5 },
+    { name: 'CSS', type: "Front-End", src: css },
+    { name: 'JavaScript', type: "Front-End", src: JavaScript },
+    { name: 'TypeScript', type: "Front-End", src: typescript },
+    { name: 'Tailwind', type: "Front-End", src: tailwind },
+    { name: 'Styled Components', type: "Front-End", src: styledComponents },
+    { name: 'React', type: "Front-End", src: react },
+    { name: 'Zod', type: "Front-End", src: zod },
+    { name: 'Node', type: "Back-End", src: node },
+    { name: 'Mysql', type: "Back-End", src: mysql },
+    { name: 'Prisma', type: "Back-End", src: prisma },
+    { name: 'Express', type: "Back-End", src: express },
+    { name: 'Firebase', type: "Back-End", src: firebase },
+    { name: 'Git', type: "Extra", src: git },
+    { name: 'Github', type: "Extra", src: github, lightMode : githubLight },
+    { name: 'Figma', type: "Extra", src: figma },
 ]

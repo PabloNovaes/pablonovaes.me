@@ -7,7 +7,8 @@ import { Button } from './ui/button';
 const links = [
     { src: '/', name: 'Inicio' },
     { src: '/projects', name: 'Projetos' },
-    { src: '/about', name: 'Sobre' }
+    { src: '/about', name: 'Sobre' },
+    { src: '/stack', name: 'Stack' }
 ]
 export function Navbar() {
     const tabsRef = useRef<HTMLAnchorElement[]>([]);
@@ -55,7 +56,7 @@ export function Navbar() {
                     {!path.pathname.includes('projects/') && (
                         <span
                             style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
-                            className="absolute inset-x-1 bottom-0 transition-all duration-500 h-px rounded-t-lg bg-gradient-to-r from-[#ab87ff]/0 via-[#ab87ff]/80 to-[[#ab87ff]/0"
+                            className="absolute inset-x-1 bottom-0 transition-all duration-[400ms] h-px rounded-t-lg bg-gradient-to-r from-[#ab87ff]/0 via-[#ab87ff]/80 to-[[#ab87ff]/0"
                         ></span>
                     )}
                     {links.map((link, idx) => {

@@ -31,7 +31,7 @@ export const projects: Record<string, ProjectsProps> = {
         image: '../assets/projects/ts-table.jpg',
         stack: ['TypeScript', 'React', 'Shadcn-ui'],
         codeUrl: 'https://github.com/pablonovaes/ts-table',
-        deploy: 'https://tstable.vercel.app/app',
+        deploy: 'https://tstable.vercel.app',
 
     },
     'ts-form': {

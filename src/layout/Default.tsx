@@ -14,12 +14,12 @@ export function DefaultLayout() {
                     }
                 }}
                 className="font-telegraf border-b border-input">
-                <div className="max-w-screen-sm py-5 px-8 flex items-center justify-between m-auto">
+                <div className="max-w-[680px] py-5 px-8 flex items-center justify-between m-auto">
                     <Navbar />
                     <ToogleTheme />
                 </div>
             </motion.header>
-            <main className="px-8 mt-5 pb-5 flex-col font-telegraf-light h-full max-w-screen-sm m-auto flex flex-column font-medium">
+            <main className="px-8 mt-5 pb-5 flex-col font-telegraf-light h-full max-w-[680px] m-auto flex flex-column font-medium">
                 <Outlet />
             </main></>
     )

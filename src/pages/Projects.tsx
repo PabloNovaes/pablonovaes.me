@@ -8,7 +8,7 @@ export function Projects() {
 
   return (
     <>
-      <PageInnitalText title="Meus projetos" transitionDelay={.3}
+      <PageInnitalText title="Meus projetos" 
       content="Aqui eu mostrarei apenas os projetos que eu acredito que mereçam ser destacados, por mais simples que sejam."
        />
       {
@@ -19,7 +19,7 @@ export function Projects() {
             initial={{opacity: 0, x: -30}}
             animate={{
               opacity: 1, x: 0, transition: {
-                duration: 0.4, delay: indx * .2
+                duration: 0.5, delay: indx * .4
               }
             }}
             key={img.name}
