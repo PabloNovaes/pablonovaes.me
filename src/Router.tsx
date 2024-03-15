@@ -10,7 +10,7 @@ export function Router() {
     return (
         <ThemeProvider>
             <Routes>
-                <Route path="/pablonovaes.me" element={<DefaultLayout />}>
+                <Route path="/" element={<DefaultLayout />}>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/projects" element={<Projects />} />
