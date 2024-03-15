@@ -1,6 +1,5 @@
-import { allTechs } from '@/data/stack';
+import { stackImages } from '@/data/stack';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
 
 export interface ImageProps {
     name?: string;
@@ -8,33 +7,17 @@ export interface ImageProps {
 }
 
 export function Stack() {
-    const [images, setImages] = useState<ImageProps[]>([]);
-
-    useEffect(() => {
-        const loadImages = async () => {
-            const loadedImages: ImageProps[] = [];
-            for (const { name } of allTechs) {
-
-                const { default: src } = await import(`../assets/techs/${name.toLowerCase()}.svg`);
-                loadedImages.push({ name, src });
-            }
-            setImages(loadedImages);
-        };
-
-        loadImages();
-    }, []);
-
     return (
         <>
             <section>
                 <div className=' grid gap-2 place-content-end grid-cols-2 lg:grid-cols-3'>
-                    {images.map(({ name, src }, index) => (
+                    {stackImages.map(({ name, src }, index) => (
                         <motion.div
                             key={name}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{
                                 opacity: 1, y: 0, transition: {
-                                    duration: 0.5, delay: 0.1 * index
+                                    duration: 0.5, delay: 0.2 * index
                                 }
                             }}
                             id="content"

@@ -1,3 +1,8 @@
+import firechat from "@/assets/projects/firechat.jpg"
+import mybook from "@/assets/projects/mybook.jpg"
+import tsForm from "@/assets/projects/ts-form.jpg"
+import tsTable from "@/assets/projects/ts-table.jpg"
+
 interface ProjectsProps {
     name: string
     description: string
@@ -7,6 +12,7 @@ interface ProjectsProps {
     stack: string[]
     observation?: string
 }
+
 
 export const projects: Record<string, ProjectsProps> = {
     mybook: {
@@ -40,9 +46,16 @@ export const projects: Record<string, ProjectsProps> = {
     firechat: {
         name: 'Firechat',
         description: 'O projeto consiste em um pequeno chat que foi deenvolvido utilizado Firebase, serviu como teste para o chat que iria desenvolver em outro projeto.',
-        image: '../assets/projects/firechat.png',
+        image: '../assets/projects/firechat.jpg',
         stack: ['HTML', 'CSS', 'JavaScript'],
         codeUrl: 'https://github.com/pablonovaes/firechat',
         deploy: 'https://pablonovaes.github.io/Firechat',
     }
 }
+
+export const projectsImages = [
+    {name: "MyBook", src: mybook},
+    {name: "Ts-Table", src: tsTable},
+    {name: "Ts-Form", src: tsForm},
+    {name: "Firechat", src: firechat},
+]

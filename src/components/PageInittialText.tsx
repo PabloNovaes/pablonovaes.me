@@ -1,37 +1,39 @@
 import { motion } from "framer-motion";
 
-const variants = {
-    hidden: {
-        opacity: 0,
-    },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: .2
-        }
-    }
-}
-
-const item = {
-    hidden: {
-        opacity: 0,
-        y: 30
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.5,
-        }
-    }
-}
-
-
 interface PageInnitalTextProps {
     title: string;
     content?: string;
+    transitionDelay?: number
 }
-export function PageInnitalText({ title, content }: PageInnitalTextProps) {
+export function PageInnitalText({ title, content, transitionDelay }: PageInnitalTextProps) {
+    const variants = {
+        hidden: {
+            opacity: 0,
+            y: 30
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: transitionDelay,
+                duration: 0.5,
+            }
+        }
+    }
+
+    const item = {
+        hidden: {
+            opacity: 0,
+            angle: 30
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+            }
+        }
+    }
     return (
         <motion.div
             variants={variants}

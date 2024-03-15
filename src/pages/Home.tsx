@@ -16,8 +16,14 @@ export function Home() {
                     title="Web Developer"
                     content="Olá, me chamo Pablo, sou desenvolvedor Web, estou sempre atraz de aprender mais e ampliar meus conhecimentos."
                 />
-                <motion.footer 
-                 className="flex gap-2 mt-1">
+                <motion.footer
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{
+                      opacity: 1, y: 0, transition: {
+                          duration: 0.4, delay:  .3
+                      }
+                  }}
+                    className="flex gap-2 mt-1">
                     <Button
                         variant={"outline"}
                         className="rounded-full hover:scale-[.98] transition-all shadow font-semibold text-zinc-500">
@@ -51,11 +57,25 @@ export function Home() {
                 </motion.footer>
             </div>
             <div className="mt-8">
-                <span className="flex items-center gap-2 text-lg">
+                <motion.span 
+                 initial={{ opacity: 0, y: 30 }}
+                 animate={{
+                     opacity: 1, y: 0, transition: {
+                         duration: 0.4, delay:  .6
+                     }
+                 }}
+                className="flex items-center gap-2 text-lg">
                     Principal projeto
                     <ArrowCircleDown weight="light" />
-                </span>
-                <div className="card w-full border bg-primary-foreground overflow-hidden shadow-md mt-4 rounded-lg relative  text-zinc-50">
+                </motion.span>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{
+                        opacity: 1, y: 0, transition: {
+                            duration: 0.4, delay:  .9
+                        }
+                    }}
+                    className="card w-full border bg-primary-foreground overflow-hidden shadow-md mt-4 rounded-lg relative  text-zinc-50">
                     <img src={mybook} alt="" className="object-cover w-full" />
                     <p className="absolute left-0 bottom-0 pl-3 pb-3 pt-8 w-full bg-gradient-to-t from-black tex to-transparent">MyBook</p>
                     <div className="card-blur absolute invisible bg-zinc-800/50 dark:bg-zinc-950/50 grid place-content-center backdrop-blur-[3px] inset-0 opacity-0 transition-opacity duration-300">
@@ -64,7 +84,7 @@ export function Home() {
                             <span className="absolute opacity-0 w-full left-0 h-[2px] bg-zinc-300 -bottom-4 transition-all"></span>
                         </NavLink>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </>
     )
