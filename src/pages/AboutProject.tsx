@@ -12,7 +12,7 @@ interface ObservationProps {
 }
 
 const Observation = ({ content }: ObservationProps) => (
-    <span  className="mt-5">
+    <span className="mt-5">
         <p className="gap-2 inline-flex items-center">
             <b>Obs:</b> {content}
         </p>
@@ -31,7 +31,6 @@ const variants = {
     }
 }
 
-
 const item = {
     hidden: {
         opacity: 0,
@@ -46,14 +45,14 @@ const item = {
     }
 }
 
-
 export function AboutProjects() {
     const location = useLocation().pathname.split('/')[2]
 
-    const projectImg = projectsImages.filter(img => img.name.toLocaleLowerCase() === location)[0]
-     
+    const projectImg = projectsImages.filter(img => img.link.toLocaleLowerCase() === location)[0]
+
     const { name, description, deploy, codeUrl, observation, stack } = projects[location]
 
+    window.scrollTo(0, 0)
     return (
         <>
             <motion.div
@@ -65,7 +64,7 @@ export function AboutProjects() {
                     <img src={projectImg.src} className="object-cover w-full" />
                     <span className="absolute left-0 bottom-0 pl-3 pb-3 pt-8 w-full bg-gradient-to-t from-black tex to-transparent"></span>
                 </motion.div>
-                <motion.div  variants={item} className="flex gap-2 mb-4 flex-wrap">
+                <motion.div variants={item} className="flex gap-2 mb-4 flex-wrap">
                     {stack.map(tech => (
                         <Badge key={tech} variant={"secondary"} className="rounded-full bg-primary-foreground text-current">
                             {tech}
@@ -73,17 +72,17 @@ export function AboutProjects() {
                     ))}
                 </motion.div>
                 <PageInnitalText
-                transitionDelay={.4}
+                    transitionDelay={.4}
                     title={name}
                     content={description}
                 />
                 <motion.div variants={item} className="flex gap-2 left-4 mt-4 bottom-4">
-                    <a href={deploy} target="_blank">
+                    {deploy && <a href={deploy} target="_blank">
                         <Button className="flex gap-2">
                             Visitar
                             <ArrowTopRightIcon />
                         </Button>
-                    </a>
+                    </a>}
                     <a href={codeUrl} target="_blank">
                         <Button variant={'outline'} className="flex gap-2 ">
                             Ver codigo

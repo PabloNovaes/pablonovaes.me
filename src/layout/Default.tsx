@@ -3,6 +3,7 @@ import { ToogleTheme } from "@/components/ToogleTheme";
 import { motion } from "framer-motion";
 import { Outlet } from "react-router-dom";
 export function DefaultLayout() {
+    // const isSmallScreen = window.innerWidth <= 380
 
     return (
         <>
@@ -15,7 +16,7 @@ export function DefaultLayout() {
                 }}
                 className="font-telegraf border-b border-input">
                 <div className="max-w-[680px] py-5 px-8 flex items-center justify-between m-auto">
-                    <Navbar />
+                    {<Navbar />}
                     <ToogleTheme />
                 </div>
             </motion.header>

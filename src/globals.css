@@ -86,6 +86,11 @@
   body {
     @apply bg-background text-foreground antialiased;
   }
+  @media(max-width: 380px){
+    :root{
+      font-size: 92.5%;
+    }
+  }
 
   body {
     &::-webkit-scrollbar {

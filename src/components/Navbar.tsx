@@ -49,7 +49,7 @@ export function Navbar() {
             {path.pathname.includes('/projects/') ? (
                 <Button variant={'outline'} onClick={handleGoBack} className='p-3 h-full shadow-sm border
                 bg-primary-foreground rounded-full'>
-                    <ArrowLeft size={18}/>
+                    <ArrowLeft size={18} />
                 </Button>
             ) : (
                 <ul className="flex gap-4 overflow-hidden relative text-sm py-3 px-5 border border-input shadow-sm bg-primary-foreground rounded-full">

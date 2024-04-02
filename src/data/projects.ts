@@ -1,5 +1,6 @@
 import firechat from "@/assets/projects/firechat.jpg"
 import mybook from "@/assets/projects/mybook.jpg"
+import TSapi from "@/assets/projects/ts-api.jpg"
 import tsForm from "@/assets/projects/ts-form.jpg"
 import tsTable from "@/assets/projects/ts-table.jpg"
 
@@ -8,8 +9,8 @@ interface ProjectsProps {
     description: string
     image: string
     codeUrl: string
-    deploy: string
     stack: string[]
+    deploy?: string
     observation?: string
 }
 
@@ -26,7 +27,7 @@ export const projects: Record<string, ProjectsProps> = {
 
     },
     'ts-table': {
-        name: 'Ts-Table',
+        name: 'TS Table',
         description: 'Este foi o primeiro projeto em React que desenvolvi sozinho sem auxilio de curso ou coisa do tipo, e por mais simples que seja, tive um aprendizado significativo em react e ts. É uma tabela com dados estáticos, podendo ser feita a inclusao de um novo produto e aplicação de filtros.',
         image: '../assets/projects/ts-table.jpg',
         stack: ['TypeScript', 'React', 'Tailwind', 'Shadcn-ui'],
@@ -34,8 +35,16 @@ export const projects: Record<string, ProjectsProps> = {
         deploy: 'https://tstable.vercel.app',
 
     },
+    'ts-api': {
+        name: 'TS Api',
+        description: 'Primeira APi que faço aplicando patterns e conceitos que ainda não havia utilizado, como SRP e DIP do solid, injeção de dependência, além de utilizar novas tecnologiaas e ser minha primeira aplicação onde fiz a inclusão de testes, tanto unitarios quanto de integração.',
+        image: '../assets/projects/ts-api.jpg',
+        stack: ['Fastify', 'TypeScript', 'Docker', 'Postgres', 'Prisma', 'Bcrypt', 'Jest', 'SuperTest'],
+        codeUrl: 'https://github.com/pablonovaes/ts-api',
+
+    },
     'ts-form': {
-        name: 'Ts-Form',
+        name: 'TS Form',
         description: 'Um formulario em react com ts, onde pude praticar ainda mais o uso do Zod para lidar com formulario (desde sua configuração no projeto, até o seu uso em si), seu uso não foi muito "intenso" devido a simplicidade do projeto.',
         image: '../assets/projects/ts-form.jpg',
         stack: ['TypeScript', 'React', 'Tailwind', 'Shadcn-ui', 'Zod'],
@@ -54,8 +63,9 @@ export const projects: Record<string, ProjectsProps> = {
 }
 
 export const projectsImages = [
-    {name: "MyBook", src: mybook},
-    {name: "Ts-Table", src: tsTable},
-    {name: "Ts-Form", src: tsForm},
-    {name: "Firechat", src: firechat},
+    {name: "MyBook", src: mybook, link: "mybook"},
+    {name: "TS Api", src: TSapi, link: "ts-api"},
+    {name: "TS Table", src: tsTable, link: "ts-table"},
+    {name: "TS Form", src: tsForm, link: "ts-form"},
+    {name: "Firechat", src: firechat, link: "firechat"},
 ]
