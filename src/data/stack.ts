@@ -36,5 +36,5 @@ export const stackImages = [
     { name: 'Git', type: "Extra", src: git },
     { name: 'Github', type: "Extra", src: github, invert: true },
     { name: 'Figma', type: "Extra", src: figma },
-    { name: 'Docker', type: "Extra", src: docker },
+    { name: 'Docker', type: "Back-End", src: docker },
 ]
