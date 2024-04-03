@@ -29,7 +29,7 @@ export function Projects() {
                 <img src={img.src} className="object-cover w-full" />
                 <p className="absolute left-0 bottom-0 pl-3 pb-3 pt-8 w-full bg-gradient-to-t from-black tex to-transparent">{img.name}</p>
                 <div className="card-blur invisible absolute bg-zinc-800/50 dark:bg-zinc-950/50 grid place-content-center backdrop-blur-[3px] inset-0 opacity-0">
-                  <NavLink to={`${img.link}`} className="card-text text-3xl flex justify-center cursor-pointer relative ">
+                  <NavLink to={`${img.link}`} className="card-text text-2xl flex justify-center cursor-pointer relative ">
                     Ver
                     <span className="absolute opacity-0 w-full left-0 h-[2px] bg-zinc-300 -bottom-4"></span>
                   </NavLink>
