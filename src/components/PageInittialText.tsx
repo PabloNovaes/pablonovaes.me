@@ -40,14 +40,15 @@ export function PageInnitalText({ title, content, transitionDelay }: PageInnital
             initial="hidden"
             animate="visible"
             id="content"
-            className="grid gap-4 h-fit">
+            className="h-fit grid gap-4">
             <motion.h1 variants={item}
-                className="text-4xl font-bold">
+                className="text-3xl font-telegraf font-semibold">
                 {title}
             </motion.h1>
             <motion.p variants={item}>
                 {content}
             </motion.p>
+
         </motion.div>
     )
 }

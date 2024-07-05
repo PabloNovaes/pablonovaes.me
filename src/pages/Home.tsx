@@ -6,23 +6,30 @@ import cv from "../data/Pablo Novaes - Desenvolvedor Web.pdf";
 import { PageInnitalText } from "@/components/PageInittialText";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import mybook from "../assets/projects/mybook.jpg";
+
+import { Badge } from "@/components/ui/badge";
+import { projects } from "@/data/projects";
+
 
 export function Home() {
+    const { name, category, link, midia } = projects.filter(project => project.name === "iFast Store")[0]
+
     return (
         <>
             <div className="grid gap-4">
                 <PageInnitalText
                     title="Web Developer"
-                    content="Olá, me chamo Pablo, sou desenvolvedor Web, estou sempre atraz de aprender mais e ampliar meus conhecimentos."
+                    content="Olá, meu nome é Pablo. Sou desenvolvedor web com quase 2 anos de experiência, atuando tanto no desenvolvimento Front-End quanto Back-End. Tenho familiaridade com tecnologias como React, Next.js, Node.js, Express, entre outras. Estou sempre buscando aperfeiçoar meus conhecimentos para crescer e evoluir como Dev."
                 />
+
+
                 <motion.footer
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{
-                      opacity: 1, y: 0, transition: {
-                          duration: 0.4, delay:  .3
-                      }
-                  }}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{
+                        opacity: 1, y: 0, transition: {
+                            duration: 0.4, delay: .3
+                        }
+                    }}
                     className="flex gap-2 mt-1">
                     <Button
                         variant={"outline"}
@@ -57,14 +64,14 @@ export function Home() {
                 </motion.footer>
             </div>
             <div className="mt-8">
-                <motion.span 
-                 initial={{ opacity: 0, y: 30 }}
-                 animate={{
-                     opacity: 1, y: 0, transition: {
-                         duration: 0.4, delay:  .6
-                     }
-                 }}
-                className="flex items-center gap-2 text-lg">
+                <motion.span
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{
+                        opacity: 1, y: 0, transition: {
+                            duration: 0.4, delay: .6
+                        }
+                    }}
+                    className="flex items-center gap-2 text-lg">
                     Principal projeto
                     <ArrowCircleDown weight="light" />
                 </motion.span>
@@ -72,14 +79,22 @@ export function Home() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{
                         opacity: 1, y: 0, transition: {
-                            duration: 0.4, delay:  .9
+                            duration: 0.4, delay: .9
                         }
                     }}
                     className="card w-full border bg-primary-foreground overflow-hidden shadow-md mt-4 rounded-lg relative  text-zinc-50">
-                    <img src={mybook} alt="" className="object-cover w-full" />
-                    <p className="absolute left-0 bottom-0 pl-3 pb-3 pt-8 w-full bg-gradient-to-t from-black tex to-transparent">MyBook</p>
-                    <div className="card-blur absolute invisible bg-zinc-800/50 dark:bg-zinc-950/50 grid place-content-center backdrop-blur-[3px] inset-0 opacity-0 transition-opacity duration-300">
-                        <NavLink to="/projects/mybook" className="card-text text-3xl flex justify-center cursor-pointer relative ">
+                    {
+                        midia.includes("https")
+                            ? <video autoPlay src={midia} className="object-cover w-full" />
+
+                            : <img src={midia} className="object-cover w-full" />
+                    }                     <div className="flex items-end justify-between absolute left-0 bottom-0 px-3 pb-2 pt-8 w-full bg-gradient-to-t from-black tex to-transparent">
+                        <p>{name}</p>
+                        <Badge className="mb-1" variant={category !== 'trabalho' ? "secondary" : "default"}>
+                            {category}
+                        </Badge>
+                    </div>                    <div className="card-blur absolute invisible bg-zinc-800/50 dark:bg-zinc-950/50 grid place-content-center backdrop-blur-[3px] inset-0 opacity-0 transition-opacity duration-300">
+                        <NavLink to={`/projects/${link}`} className="card-text text-3xl flex justify-center cursor-pointer relative ">
                             Ver
                             <span className="absolute opacity-0 w-full left-0 h-[2px] bg-zinc-300 -bottom-4 transition-all"></span>
                         </NavLink>

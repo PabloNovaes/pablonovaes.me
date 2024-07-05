@@ -56,7 +56,7 @@ export function Navbar() {
                     {!path.pathname.includes('projects/') && (
                         <span
                             style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
-                            className="absolute inset-x-1 bottom-0 transition-all duration-[400ms] h-px rounded-t-lg bg-gradient-to-r from-[#ab87ff]/0 via-[#ab87ff]/80 to-[[#ab87ff]/0"
+                            className="absolute inset-x-1 bottom-0 transition-all duration-[400ms] h-px rounded-t-lg bg-gradient-to-r from-violet-400/0 via-violet-400/80 to-violet-400/0"
                         ></span>
                     )}
                     {links.map((link, idx) => {

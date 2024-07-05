@@ -26,7 +26,7 @@ export function Stack() {
                         <div>
 
                             <motion.h2
-                                className='font-semibold'
+                                className='font-telegraf font-semibold'
                                 key={type}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{
@@ -71,10 +71,6 @@ export function Stack() {
                     ))
                 }
 
-                {/* {stackImages.map(({ name, src }, index) => (
-                        
-                    ))}
-                </div> */}
             </section>
         </>
     );

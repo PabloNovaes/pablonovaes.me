@@ -10,6 +10,7 @@ import github from "@/assets/techs/github.svg"
 import html5 from "@/assets/techs/html5.svg"
 import JavaScript from "@/assets/techs/javascript.svg"
 import mysql from "@/assets/techs/mysql.svg"
+import next from "@/assets/techs/next.svg"
 import node from "@/assets/techs/node.svg"
 import prisma from "@/assets/techs/prisma.svg"
 import react from "@/assets/techs/react.svg"
@@ -26,6 +27,7 @@ export const stackImages = [
     { name: 'Tailwind', type: "Front-End", src: tailwind },
     { name: 'Styled Components', type: "Front-End", src: styledComponents },
     { name: 'React', type: "Front-End", src: react },
+    { name: 'Next', type: "Front-End", src: next, invert: true },
     { name: 'Zod', type: "Front-End", src: zod },
     { name: 'Node', type: "Back-End", src: node },
     { name: 'Mysql', type: "Back-End", src: mysql },

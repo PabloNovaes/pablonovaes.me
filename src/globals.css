@@ -4,15 +4,15 @@
 
 @font-face {
   font-family: "Telegraf";
-  src: url("./fonts/PPTelegraf-Regular.otf") format("opentype");
+  src: url("./assets/fonts/PPTelegraf-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Telegraf-bold";
-  src: url("./fonts/PPTelegraf-UltraBold.otf") format("opentype");
+  src: url("./assets/fonts/PPTelegraf-UltraBold.otf") format("opentype");
 }
 @font-face {
   font-family: "Telegraf-light";
-  src: url("./fonts/PPTelegraf-UltraLight.otf") format("opentype");
+  src: url("./assets/fonts/PPTelegraf-UltraLight.otf") format("opentype");
 }
 
 @layer base {
@@ -120,5 +120,10 @@
 
   .card:hover img {
     @apply scale-110;
+  }
+
+  .image{
+   @apply rounded-full bg-primary-foreground border 
+    /* background: url('../public/fav.svg') center top/cover no-repeat; */
   }
 }
