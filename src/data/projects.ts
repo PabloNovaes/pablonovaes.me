@@ -22,7 +22,7 @@ export const projects: Project[] = [
     {
         name: 'iFast Store',
         description: 'Este é meu primeiro projeto como freelancer, trata-se de um e-commerce para venda de iPhones, Notebooks e outros produtos. O mesmo foi desenvolvido com Next Js, conta com uma área administrativa para controle de produtos, estoque e pedidos',
-        midia: "https://firebasestorage.googleapis.com/v0/b/upload-hub-fdabc.appspot.com/o/files%2FFast%20Store%20-%20dashboard.mp4?alt=media&token=434fbb4f-1677-4814-ae20-adc8d303b939",
+        midia: "https://firebasestorage.googleapis.com/v0/b/upload-hub-fdabc.appspot.com/o/files%2FFast%20Store%20-%20dashboard.mp4?alt=media&token=b841b36a-5e9e-40d7-a6e5-e7cfd20687ee",
         stack: ['Next', 'React', 'TypeScript', 'Tailwind', 'Prisma', 'Firebase', 'Neon (postgreSql)'],
         // codeUrl: 'https://github.com/pablonovaes/mybook',
         category: 'trabalho',
