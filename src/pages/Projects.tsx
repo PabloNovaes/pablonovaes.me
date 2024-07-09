@@ -28,7 +28,7 @@ export function Projects() {
                 key={name}
                 className="card w-full border bg-primary-foreground overflow-hidden shadow-md mt-4 rounded-lg relative  text-zinc-50">
                 {
-                  midia.includes("https")
+                  midia.includes(".mp4")
                     ? <video autoPlay src={midia} className="object-cover w-full" />
 
                     : <img src={midia} className="object-cover w-full" />

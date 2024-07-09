@@ -59,8 +59,8 @@ export function AboutProjects() {
                 className="grid">
                 <motion.div variants={item} className="mb-4 relative w-full border bg-primary-foreground overflow-hidden shadow-md rounded-lg text-zinc-50">
                     {
-                        midia.includes("https")
-                            ? <video autoPlay src={midia} className="object-cover w-full" />
+                        midia.includes(".mp4")
+                        ? <video autoPlay src={midia} className="object-cover w-full" />
 
                             : <img src={midia} className="object-cover w-full" />
                     }                    <span className="absolute left-0 bottom-0 pl-3 pb-3 pt-8 w-full bg-gradient-to-t from-black tex to-transparent"></span>

@@ -1,5 +1,5 @@
+import ifaststore from "@/assets/projects/Fast Store - dashboard.mp4"
 import firechat from "@/assets/projects/firechat.jpg"
-import ifaststore from "@/assets/projects/ifaststore.png"
 import mybook from "@/assets/projects/mybook.jpg"
 import tsApi from "@/assets/projects/ts-api.jpg"
 import tsForm from "@/assets/projects/ts-form.jpg"
@@ -22,9 +22,9 @@ export const projects: Project[] = [
     {
         name: 'iFast Store',
         description: 'Este é meu primeiro projeto como freelancer, trata-se de um e-commerce para venda de iPhones, Notebooks e outros produtos. O mesmo foi desenvolvido com Next Js, conta com uma área administrativa para controle de produtos, estoque e pedidos',
-        midia: "https://firebasestorage.googleapis.com/v0/b/upload-hub-fdabc.appspot.com/o/files%2FFast%20Store%20-%20dashboard.mp4?alt=media&token=434fbb4f-1677-4814-ae20-adc8d303b939",
+        midia: ifaststore,
         stack: ['Next', 'React', 'TypeScript', 'Tailwind', 'Prisma', 'Firebase', 'Neon (postgreSql)'],
-        // codeUrl: 'https://github.com/pablonovaes/mybook',
+        codeUrl: 'https://github.com/pablonovaes/iFastStore',
         category: 'trabalho',
         deploy: 'https://ifaststore.it',
         link: "ifaststore"
