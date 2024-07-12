@@ -12,7 +12,7 @@ export function ToogleTheme() {
                 setTheme(theme === "dark" ? "light" : "dark")
             }}
             className="p-3 h-full shadow-sm border
-            bg-primary-foreground rounded-full">
+            bg-primary-foreground rounded-full transition-colors">
             {theme === "dark" ? <MoonStars size={18}/> : <Sun size={18}/>}
         </Button>
     )

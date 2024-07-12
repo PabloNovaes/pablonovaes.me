@@ -9,11 +9,14 @@ import git from "@/assets/techs/git.svg"
 import github from "@/assets/techs/github.svg"
 import html5 from "@/assets/techs/html5.svg"
 import JavaScript from "@/assets/techs/javascript.svg"
+import jest from "@/assets/techs/jest.svg"
 import mysql from "@/assets/techs/mysql.svg"
 import next from "@/assets/techs/next.svg"
 import node from "@/assets/techs/node.svg"
+import postgres from "@/assets/techs/postgres.svg"
 import prisma from "@/assets/techs/prisma.svg"
 import react from "@/assets/techs/react.svg"
+import shadcnui from "@/assets/techs/shadcnui.svg"
 import styledComponents from "@/assets/techs/styled components.svg"
 import tailwind from "@/assets/techs/tailwind.svg"
 import typescript from "@/assets/techs/typescript.svg"
@@ -28,15 +31,20 @@ export const stackImages = [
     { name: 'Styled Components', type: "Front-End", src: styledComponents },
     { name: 'React', type: "Front-End", src: react },
     { name: 'Next', type: "Front-End", src: next, invert: true },
+    { name: 'Shadcn-ui', type: "Front-End", src: shadcnui, invert: true },
     { name: 'Zod', type: "Front-End", src: zod },
     { name: 'Node', type: "Back-End", src: node },
     { name: 'Mysql', type: "Back-End", src: mysql },
     { name: 'Prisma', type: "Back-End", src: prisma, invert: true },
-    { name: 'Express', type: "Back-End", src: express },
+    { name: 'ExpressJS', type: "Back-End", src: express, invert: true },
     { name: 'Fastify', type: "Back-End", src: fastify, invert: true },
     { name: 'Firebase', type: "Back-End", src: firebase },
-    { name: 'Git', type: "Extra", src: git },
-    { name: 'Github', type: "Extra", src: github, invert: true },
-    { name: 'Figma', type: "Extra", src: figma },
     { name: 'Docker', type: "Back-End", src: docker },
+    { name: 'TypeScript', type: "Back-End", src: typescript },
+    { name: 'Zod', type: "Back-End", src: zod },
+    { name: 'Postgres', type: "Back-End", src: postgres },
+    { name: 'Git', type: "Versionamento", src: git },
+    { name: 'Github', type: "Versionamento", src: github, invert: true },
+    { name: 'Figma', type: "Design", src: figma },
+    { name: 'Jest', type: "Testes", src: jest }
 ]

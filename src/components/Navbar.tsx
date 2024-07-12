@@ -75,6 +75,28 @@ export function Navbar() {
                         );
                     })}
                 </ul>
+                //       <ul className="flex gap-4 overflow-hidden relative items-center text-sm py-3 px-5 border border-input shadow-sm bg-primary-foreground rounded-full">
+                //       {!path.pathname.includes('projects/') && (
+                //           <span
+                //               style={{ left: tabUnderlineLeft - 7, width: tabUnderlineWidth + 14 }}
+                //               className="absolute inset-x-1 transition-all duration-[400ms] h-[60%] rounded-full bg-primary"></span>
+                //       )}
+                //       {links.map((link, indx) => {
+                //           const { src, name } = link;
+                //           return (
+                //               <li key={indx}>
+                //                   <NavLink
+                //                       ref={(el: HTMLAnchorElement) => (tabsRef.current[indx] = el)}
+                //                       className={`inline-flex relative justify-center z-10 transition-colors duration-150 ${activeTabIndex === indx && 'text-primary-foreground'}`}
+                //                       onClick={() => setActiveTabIndex(indx)}
+                //                       id={link.name}
+                //                       to={src}>
+                //                       {name}
+                //                   </NavLink>
+                //               </li>
+                //           );
+                //       })}
+                //   </ul>
             )}
         </nav>
     );

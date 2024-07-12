@@ -1,12 +1,12 @@
 import { PageInnitalText } from "@/components/PageInittialText";
+import { Reveal } from "@/components/Reveal";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
+import { Bag, Student } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
 export function Projects() {
-
-
   return (
     <>
       <PageInnitalText title="Meus projetos"
@@ -14,28 +14,26 @@ export function Projects() {
       />
       <div className="sm:grid grid-cols-2 gap-x-4">
 
-        {
-          projects.map(({ name, category, midia, link }, indx) => {
+        {projects.map(({ name, category, midia, link }) => {
 
-            return (
+          return (
+            <Reveal>
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{
-                  opacity: 1, x: 0, transition: {
-                    duration: 0.5, delay: indx * .25
-                  }
-                }}
                 key={name}
-                className="card w-full border bg-primary-foreground overflow-hidden shadow-md mt-4 rounded-lg relative  text-zinc-50">
+                initial={{ opacity: 0, x: -40 }}
+                className="card item opacity-0 w-full border bg-primary-foreground overflow-hidden shadow-md mt-4 rounded-lg relative text-zinc-50">
                 {
                   midia.includes(".mp4")
                     ? <video autoPlay src={midia} className="object-cover w-full" />
-
                     : <img src={midia} className="object-cover w-full" />
                 }
                 <div className="flex items-end justify-between absolute left-0 bottom-0 px-3 pb-2 pt-8 w-full bg-gradient-to-t from-black tex to-transparent">
                   <p>{name}</p>
-                  <Badge className="mb-1" variant={category !== 'trabalho' ? "secondary" : "default"}>
+                  <Badge className="mb-1 flex gap-1 bg-primary-foreground text-primary">
+                    {category !== 'trabalho'
+                      ? <Student size={15} weight="fill" />
+                      : <Bag size={15} weight="fill" />
+                    }
                     {category}
                   </Badge>
                 </div>
@@ -46,8 +44,9 @@ export function Projects() {
                   </NavLink>
                 </div>
               </motion.div>
-            )
-          })
+            </Reveal>
+          )
+        })
         }
       </div>
     </>

@@ -86,8 +86,8 @@
   body {
     @apply bg-background text-foreground antialiased;
   }
-  @media(max-width: 380px){
-    :root{
+  @media (max-width: 380px) {
+    :root {
       font-size: 92.5%;
     }
   }
@@ -122,8 +122,16 @@
     @apply scale-110;
   }
 
-  .image{
-   @apply rounded-full bg-primary-foreground border 
-    /* background: url('../public/fav.svg') center top/cover no-repeat; */
+  .image {
+    @apply rounded-full bg-primary-foreground border 
+    /* background: url('../public/fav.svg') center top/cover no-repeat; */;
+  }
+  
+  .stack-container-wrapper {
+    &:hover {
+      & p {
+        @apply visible opacity-100 -top-8 scale-110;
+      }
+    }
   }
 }

@@ -22,6 +22,7 @@ export function DefaultLayout() {
             </motion.header>
             <main className="px-8 mt-5 pb-5 flex-col font-telegraf-light h-full max-w-[680px] m-auto flex flex-column font-medium">
                 <Outlet />
-            </main></>
+            </main>
+        </>
     )
 }
