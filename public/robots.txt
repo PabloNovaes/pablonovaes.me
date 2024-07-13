@@ -1,0 +1,6 @@
+# Permite que todos os bots acessem todo o site
+User-agent: *
+Disallow:
+
+# Adiciona a URL do sitemap (ajuste se necessário)
+Sitemap: https://pablonovaes-me.vercel.app/sitemap.xml
