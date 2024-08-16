@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowCircleDown, Bag, ReadCvLogo, Student } from "@phosphor-icons/react";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import cv from "../data/Pablo Novaes - Desenvolvedor Web.pdf";
+import cv from "../data/Pablo Novaes - Desenvolvedor Web.PDF";
 
 import { PageInnitalText } from "@/components/PageInittialText";
 import { motion } from "framer-motion";
