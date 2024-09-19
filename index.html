@@ -26,28 +26,32 @@
     <meta name="twitter:image:width" content="1200" />
     <meta name="twitter:image:height" content="630" />
 
-    <script type="application/ld+json">
+      <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Pablo Novaes",
-        "url": "https://pablonovaes-me.vercel.app/",
-        "mainEntity": [
+        "@type": "ItemList",
+        "itemListElement": [
           {
-            "@type": "WebPage",
-            "@id": "https://pablonovaes-me.vercel.app/about",
-            "name": "Sobre",
-            "url": "https://pablonovaes-me.vercel.app/about"
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "url": "https://pablonovaes-me.vercel.app/"
           },
           {
-            "@type": "WebPage",
-            "@id": "https://pablonovaes-me.vercel.app/projects",
-            "name": "Projetos",
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
             "url": "https://pablonovaes-me.vercel.app/projects"
           },
           {
-            "@type": "WebPage",
-            "@id": "https://pablonovaes-me.vercel.app/stack",
+            "@type": "ListItem",
+            "position": 3,
+            "name": "About",
+            "url": "https://pablonovaes-me.vercel.app/about"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
             "name": "Stack",
             "url": "https://pablonovaes-me.vercel.app/stack"
           }
