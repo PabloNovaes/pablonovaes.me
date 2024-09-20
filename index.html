@@ -26,38 +26,39 @@
     <meta name="twitter:image:width" content="1200" />
     <meta name="twitter:image:height" content="630" />
 
-      <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "url": "https://pablonovaes-me.vercel.app/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Projects",
-            "url": "https://pablonovaes-me.vercel.app/projects"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "About",
-            "url": "https://pablonovaes-me.vercel.app/about"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Stack",
-            "url": "https://pablonovaes-me.vercel.app/stack"
-          }
-        ]
-      }
-    </script>
+     <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Pablo Novaes - Web Developer",
+            "url": "https://pablonovaes-me.vercel.app",
+            "siteNavigationElement": [
+              {
+                "@type": "SiteNavigationElement",
+                "name": "Home",
+                "url": "https://pablonovaes-me.vercel.app/"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "name": "About",
+                "url": "https://pablonovaes-me.vercel.app/about"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "name": "Projects",
+                "url": "https://pablonovaes-me.vercel.app/projects"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "name": "Stack",
+                "url": "https://pablonovaes-me.vercel.app/stack"
+              }
+            ]
+          })
+        }}
+      />
 </head>
   <body>
     <div id="root"></div>
