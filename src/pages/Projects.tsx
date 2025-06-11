@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 export function Projects() {
   return (
     <>
-      <PageInnitalText title="Meus projetos"
+      <PageInnitalText title="Principais projetos"
         content="Aqui eu mostrarei apenas os projetos que eu acredito que mereçam ser destacados, por mais simples que sejam."
       />
       <div className="sm:grid grid-cols-2 gap-x-4">

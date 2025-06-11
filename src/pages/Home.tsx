@@ -12,14 +12,14 @@ import { projects } from "@/data/projects";
 
 
 export function Home() {
-    const { name, category, link, midia } = projects.filter(project => project.name === "iFast Store")[0]
+    const { name, category, link, midia } = projects[0]
 
     return (
         <>
             <div className="grid gap-4">
                 <PageInnitalText
-                    title="Web Developer"
-                    content="Olá, meu nome é Pablo. Sou desenvolvedor web com quase 2 anos de experiência, atuando tanto no desenvolvimento Front-End quanto Back-End. Tenho familiaridade com tecnologias como React, Next.js, Node.js, Express, entre outras. Estou sempre buscando aperfeiçoar meus conhecimentos para crescer e evoluir como Dev."
+                    title="Front-End Developer"
+                    content="Oi! Eu sou o Pablo, desenvolvedor Web focado em Front-End. Sou apaixonado por criar interfaces que prendem a atenção, surpreendem e entregam uma experiência satisfatória para o usuário. Estou sempre em busca de novas ideias e formas de inovar a cada projeto, com o objetivo de evoluir constantemente."
                 />
                 <motion.footer
                     initial={{ opacity: 0, x: -40 }}
@@ -70,7 +70,7 @@ export function Home() {
                         }
                     }}
                     className="flex items-center gap-2 text-lg">
-                    Principal projeto
+                    Ultimo projeto
                     <ArrowCircleDown weight="light" />
                 </motion.span>
                 <motion.div
@@ -88,16 +88,16 @@ export function Home() {
                             : <img src={midia} className="object-cover w-full" />
                     }
                     <div className="flex items-end justify-between absolute left-0 bottom-0 px-3 pb-2 pt-8 w-full bg-gradient-to-t from-black tex to-transparent">
-                  <p>{name}</p>
+                        <p>{name}</p>
 
-                  <Badge className="mb-1 flex gap-1 bg-primary-foreground text-primary">
-                    {category !== 'trabalho'
-                      ? <Student size={15} weight="fill" />
-                      : <Bag size={15} weight="fill" />
-                    }
-                    {category}
-                  </Badge>
-                </div>
+                        <Badge className="mb-1 flex gap-1 bg-primary-foreground text-primary">
+                            {category !== 'trabalho'
+                                ? <Student size={15} weight="fill" />
+                                : <Bag size={15} weight="fill" />
+                            }
+                            {category}
+                        </Badge>
+                    </div>
                     <div className="card-blur absolute invisible bg-zinc-800/50 dark:bg-zinc-950/50 grid place-content-center backdrop-blur-[3px] inset-0 opacity-0 transition-opacity duration-300">
                         <NavLink to={`/projects/${link}`} className="card-text text-3xl flex justify-center cursor-pointer relative ">
                             Ver

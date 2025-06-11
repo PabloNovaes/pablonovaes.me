@@ -5,7 +5,7 @@ import { stackImages } from "@/data/stack";
 import { CornersIn, CornersOut } from "@phosphor-icons/react";
 import { ArrowTopRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 
@@ -52,6 +52,30 @@ export function AboutProjects() {
     const { name, description, deploy, codeUrl, observation, stack, midia } = projects.filter(project => project.link === location)[0]
 
     const midiaWrapper = useRef(null)
+
+
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                if (typeof fullscreen?.exit === "function") {
+                    fullscreen.exit();
+                }
+            }
+            if (e.key === "f") {
+                if (typeof fullscreen?.enter === "function") {
+                    fullscreen.enter();
+                }
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, []);
+
 
     const fullscreen = {
         enter() {
