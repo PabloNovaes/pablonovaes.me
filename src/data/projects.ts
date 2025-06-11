@@ -23,7 +23,7 @@ interface Project {
 export const projects: Project[] = [
     {
         name: 'Livo Área de Visitante',
-        description: 'Landing page desenvolvida para substituir o site atual do mesmo cliente para quem criei o projeto iFast Store (e-commerce).',
+        description: 'Esse foi um dos projetos que já estavam em produção no meu último emprego e que tive a oportunidade de modernizar. O principal objetivo da atualização foi visual: o sistema precisava se adequar ao novo padrão de design adotado no site da empresa. Reescrevi a interface utilizando tecnologias mais modernas, garantindo uma experiência mais consistente, responsiva e alinhada à identidade visual atual da marca.',
         midia: visitorArea,
         stack: ['React', 'TypeScript', 'Tailwind', 'Node'],
         // codeUrl: 'https://github.com/pablonovaes/lp',
