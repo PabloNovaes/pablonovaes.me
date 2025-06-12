@@ -17,9 +17,8 @@ export function Projects() {
         {projects.map(({ name, category, midia, link }) => {
 
           return (
-            <Reveal>
+            <Reveal key={name}>
               <motion.div
-                key={name}
                 initial={{ opacity: 0, x: -40 }}
                 className="card item opacity-0 w-full border bg-primary-foreground overflow-hidden shadow-md mt-4 rounded-lg relative text-zinc-50">
                 {
