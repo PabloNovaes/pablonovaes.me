@@ -7,11 +7,7 @@ import tcc from "../assets/tcc.jpg";
 export function About() {
     return (
         <div className="grid gap-8 ">
-            <PageInnitalText title="Sobre mim"
-                content={`
-                Olá, é um prazer em ter você aqui, me chamo Pablo, atualmente tenho 19 anos e moro na capital de São Paulo. 
-                Sou desenvolvedor Web e por hora, mantenho-me mais focado em Front-End porém tenho conhecimentos de Back-End e futuramente pretendo aprender mais sobre. `}
-            />
+           
             <div className="grid-gap-4">
                 <PageInnitalText
                     title="Experiências" />
